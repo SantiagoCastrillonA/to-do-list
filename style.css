@@ -5,7 +5,6 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   background: linear-gradient(135deg, #595eb3 0%, #000DFF 100%);
   max-width: 100%;
-  /* overflow: hidden; */
   display: flex;
   justify-content: center;
 }
