@@ -11,53 +11,36 @@ body {
 }
 
 .container {
+  position: relative;
   padding: 20px;
   width: 100%;
   max-width: 540px; /* Ancho máximo para desktop */
   margin: 0 auto; /* Centrar horizontalmente */
-  z-index: 1;
 }
 
 header {
   width: 100%;
   height: 300px; /* Altura aumentada */
-  background-image: url(images/background-todo.jpg);
+  background-image: url(images/background-todo.webp);
   background-size: cover; /* Asegura que la imagen cubra todo el espacio */
   background-position: center; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita repetición */
-  position: relative;
   margin-bottom: 40px;
-  z-index: 1;
+  position: relative;
 }
 
 .header {
   padding: 30px 20px 0; /* Espaciado superior aumentado */
-  position: relative;
-  z-index: 1;
 }
 
 /* Añade esto para efecto overlay */
-header::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
+.header-content {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.3); /* Oscurece la imagen para mejor contraste */
-  z-index: 1;
 }
 
-/* Para pantallas pequeñas */
-@media (max-width: 580px) {
-  header {
-      height: 200px;
-  }
-  
-  .header {
-      padding-top: 20px;
-  }
-}
+
 
 .header {
   color: white;
@@ -67,7 +50,6 @@ header::after {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 0;
 }
 
 .check-icon {
@@ -83,13 +65,20 @@ header::after {
   margin-bottom: 20px;
 }
 
+.todo-input-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .todo-input {
   flex-grow: 1;
-  padding: 15px;
+  padding: 20px;
   border: none;
   border-radius: 10px;
   background: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
 }
 
 .todo-list {
@@ -97,7 +86,7 @@ header::after {
   border-radius: 10px;
   padding: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;
+  width: 90%;
   box-sizing: border-box;
   margin-top: -100px;
 }
@@ -111,7 +100,6 @@ header::after {
 
 }
 
-/* ... (resto del CSS anterior se mantiene igual) ... */
 
 /* Animación para el input */
 .todo-input {
@@ -315,6 +303,7 @@ header::after {
   display: none;
 }
 
+
 /* Media query */
 @media (max-width: 580px) {
   .container {
@@ -324,3 +313,63 @@ header::after {
   }
 }
 
+/* Media queries para móviles */
+@media (max-width: 480px) {
+  .container {
+      padding: 15px;
+  }
+
+  .header {
+      margin-bottom: 15px;
+  }
+
+  .todo-input {
+      padding: 12px;
+      font-size: 14px;
+  }
+
+  .todo-item {
+      padding: 12px;
+  }
+
+  .todo-text {
+      font-size: 13px;
+  }
+
+  .todo-footer {
+      padding: 12px;
+      font-size: 12px;
+  }
+
+  .todo-filters {
+      padding: 8px;
+      gap: 10px;
+  }
+
+  .filter-button {
+      padding: 6px 12px;
+      font-size: 13px;
+  }
+
+  /* Ajuste para el texto largo */
+  .todo-text {
+      max-width: calc(100% - 60px); /* Espacio para checkbox y delete */
+  }
+}
+
+/* Media query para pantallas muy pequeñas */
+@media (max-width: 320px) {
+  .container {
+      padding: 10px;
+  }
+
+  .todo-filters {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .filter-button {
+      width: 100%;
+      text-align: center;
+  }
+}
