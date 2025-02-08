@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
             <span class="todo-delete">×</span>
         `;
         
-        // Insertar antes del footer
         const footer = document.querySelector('.todo-footer');
         todoList.insertBefore(todoItem, footer);
         
