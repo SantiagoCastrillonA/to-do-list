@@ -1,15 +1,17 @@
+/* Estilos generales para el body */
 body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: linear-gradient(135deg, #595eb3 0%, #000DFF 100%);
+  background: linear-gradient(135deg, #595eb3 0%, #000dff 100%);
   max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* Contenedor principal */
 .container {
   position: relative;
   padding: 20px;
@@ -18,6 +20,7 @@ body {
   margin: 0 auto; /* Centrar horizontalmente */
 }
 
+/* Estilos para el header */
 header {
   width: 100%;
   height: 300px; /* Altura aumentada */
@@ -29,19 +32,19 @@ header {
   position: relative;
 }
 
+/* Estilos adicionales para el header */
 .header {
   padding: 30px 20px 0; /* Espaciado superior aumentado */
 }
 
-/* Añade esto para efecto overlay */
+/* Efecto overlay para el header */
 .header-content {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.3); /* Oscurece la imagen para mejor contraste */
 }
 
-
-
+/* Estilos para el texto del header */
 .header {
   color: white;
   font-size: 30px;
@@ -52,6 +55,7 @@ header {
   align-items: center;
 }
 
+/* Icono de check */
 .check-icon {
   width: 20px;
   height: 20px;
@@ -59,18 +63,21 @@ header {
   border-radius: 50%;
 }
 
+/* Contenedor de prueba */
 .test {
   width: 100%;
   display: flex;
   margin-bottom: 20px;
 }
 
+/* Contenedor del input de todo */
 .todo-input-container {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
+/* Estilos para el input de todo */
 .todo-input {
   flex-grow: 1;
   padding: 20px;
@@ -81,6 +88,7 @@ header {
   max-width: 100%;
 }
 
+/* Lista de todo */
 .todo-list {
   background: white;
   border-radius: 10px;
@@ -91,15 +99,14 @@ header {
   margin-top: -100px;
 }
 
+/* Item de la lista de todo */
 .todo-item {
   display: flex;
   align-items: center;
   padding: 15px;
   border-bottom: 1px solid #eee;
   transition: all ease-in-out 1s;
-
 }
-
 
 /* Animación para el input */
 .todo-input {
@@ -112,6 +119,7 @@ header {
   transition: all 0.3s ease;
 }
 
+/* Efecto al enfocar el input */
 .todo-input:focus {
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
@@ -128,13 +136,14 @@ header {
   background: white;
 }
 
+/* Efecto hover para los items del todo */
 .todo-item:hover {
   transform: translateX(5px);
   background: #f8f9ff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* Animación para el checkbox */
+/* Estilos para el checkbox */
 .todo-checkbox {
   width: 20px;
   height: 20px;
@@ -145,18 +154,20 @@ header {
   transition: all 0.2s ease;
 }
 
+/* Efecto hover para el checkbox */
 .todo-checkbox:hover {
-  border-color: #6B73FF;
+  border-color: #6b73ff;
   transform: scale(1.1);
 }
 
+/* Estilos para el checkbox cuando está marcado */
 .todo-checkbox.checked {
-  background-color: #6B73FF;
-  border-color: #6B73FF;
+  background-color: #6b73ff;
+  border-color: #6b73ff;
   animation: checkmark 0.2s ease-in-out;
 }
 
-/* Animación para el botón de eliminar */
+/* Estilos para el botón de eliminar */
 .todo-delete {
   color: #999;
   cursor: pointer;
@@ -165,16 +176,18 @@ header {
   transition: all 0.3s ease;
 }
 
+/* Efecto hover para el botón de eliminar */
 .todo-item:hover .todo-delete {
   opacity: 1;
 }
 
+/* Efecto hover para el botón de eliminar */
 .todo-delete:hover {
   color: #ff5555;
   transform: scale(1.2);
 }
 
-/* Animación para los botones de filtro */
+/* Estilos para los botones de filtro */
 .filter-button {
   padding: 8px 16px;
   border: none;
@@ -185,38 +198,42 @@ header {
   transition: all 0.3s ease;
 }
 
+/* Efecto hover para los botones de filtro */
 .filter-button:hover {
   opacity: 1;
   transform: translateY(-2px);
 }
 
+/* Estilos para el botón de filtro activo */
 .filter-button.active {
   opacity: 1;
   font-weight: bold;
 }
 
-/* Animación para "Clear Completed" */
+/* Estilos para "Clear Completed" */
 .todo-footer span:last-child {
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
+/* Efecto hover para "Clear Completed" */
 .todo-footer span:last-child:hover {
-  color: #6B73FF;
+  color: #6b73ff;
 }
 
 /* Animación para nuevos items */
 @keyframes slideIn {
   from {
-      opacity: 0;
-      transform: translateX(-20px);
+    opacity: 0;
+    transform: translateX(-20px);
   }
   to {
-      opacity: 1;
-      transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
+/* Aplicación de la animación para nuevos items */
 .todo-item {
   animation: slideIn 0.3s ease;
 }
@@ -224,20 +241,22 @@ header {
 /* Animación para el checkmark */
 @keyframes checkmark {
   0% {
-      transform: scale(1);
+    transform: scale(1);
   }
   50% {
-      transform: scale(1.2);
+    transform: scale(1.2);
   }
   100% {
-      transform: scale(1);
+    transform: scale(1);
   }
 }
 
+/* Estilos para el último item de la lista */
 .todo-item:last-child {
   border-bottom: none;
 }
 
+/* Estilos para el checkbox */
 .todo-checkbox {
   width: 20px;
   height: 20px;
@@ -247,22 +266,26 @@ header {
   cursor: pointer;
 }
 
+/* Estilos para el checkbox cuando está marcado */
 .todo-checkbox.checked {
-  background-color: #6B73FF;
-  border-color: #6B73FF;
+  background-color: #6b73ff;
+  border-color: #6b73ff;
 }
 
+/* Estilos para el texto del todo */
 .todo-text {
   flex: 1;
   color: #333;
 }
 
+/* Estilos para el botón de eliminar */
 .todo-delete {
   color: #999;
   cursor: pointer;
   padding: 5px;
 }
 
+/* Estilos para el footer del todo */
 .todo-footer {
   display: flex;
   justify-content: space-between;
@@ -271,6 +294,7 @@ header {
   font-size: 14px;
 }
 
+/* Estilos para los filtros del todo */
 .todo-filters {
   display: flex;
   justify-content: center;
@@ -278,6 +302,7 @@ header {
   margin-top: 20px;
 }
 
+/* Estilos para los botones de filtro */
 .filter-button {
   padding: 8px 16px;
   border: none;
@@ -287,10 +312,12 @@ header {
   opacity: 0.7;
 }
 
+/* Estilos para el botón de filtro activo */
 .filter-button.active {
   opacity: 1;
 }
 
+/* Instrucciones de arrastre */
 .drag-instructions {
   text-align: center;
   color: white;
@@ -299,77 +326,77 @@ header {
   font-size: 14px;
 }
 
+/* Clase para ocultar elementos */
 .hidden {
   display: none;
 }
 
-
-/* Media query */
+/* Media query para pantallas pequeñas */
 @media (max-width: 580px) {
   .container {
-      padding: 20px;
-      width: 100%;
-      max-width: none;
+    padding: 20px;
+    width: 100%;
+    max-width: none;
   }
 }
 
 /* Media queries para móviles */
 @media (max-width: 480px) {
   .container {
-      padding: 15px;
+    padding: 15px;
   }
 
   .header {
-      margin-bottom: 15px;
+    margin-bottom: 15px;
   }
 
   .todo-input {
-      padding: 12px;
-      font-size: 14px;
+    padding: 12px;
+    font-size: 14px;
   }
 
   .todo-item {
-      padding: 12px;
+    padding: 12px;
   }
 
   .todo-text {
-      font-size: 13px;
+    font-size: 13px;
   }
 
   .todo-footer {
-      padding: 12px;
-      font-size: 12px;
+    padding: 12px;
+    font-size: 12px;
   }
 
   .todo-filters {
-      padding: 8px;
-      gap: 10px;
+    padding: 8px;
+    gap: 10px;
   }
 
   .filter-button {
-      padding: 6px 12px;
-      font-size: 13px;
+    padding: 6px 12px;
+    font-size: 13px;
   }
 
   /* Ajuste para el texto largo */
   .todo-text {
-      max-width: calc(100% - 60px); /* Espacio para checkbox y delete */
+    max-width: calc(100% - 60px); /* Espacio para checkbox y delete */
   }
 }
 
 /* Media query para pantallas muy pequeñas */
 @media (max-width: 320px) {
   .container {
-      padding: 10px;
+    padding: 10px;
   }
 
   .todo-filters {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .filter-button {
-      width: 100%;
-      text-align: center;
+    width: 100%;
+    text-align: center;
   }
 }
